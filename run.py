@@ -2,38 +2,33 @@ import time
 
 
 def welcome(): 
-    print('Welcome to Escape The Building!')
+    print('Welcome to Escape The Building \n')
     name = ''
-    while name == '':
+    while name == ' ':
         name = input('type yor name here:').strip()
     time.sleep(1)
     print(f'welcome {name} to this adventure!')
     time.sleep(3)
-    print(f'''
-    {name} is a tourist in London. 
-    Right now your at a tour in a 
-    museum at the top floor.
-    ''')
-    print('Two bombs has exploded in the museum.')
-    print('It caused fire and you got 60 secounds to escape')
-    print('before the third bomb explode.')
+    print(f'{name} is a tourist in London.') 
+    print('Right now your at a tour in a') 
+    print('museum at the top floor.')
+    print('Two bombs has exploded in the museum.\n')
+    print('It caused fire and you have to escape')
     time.sleep(3)
     intro()
 
 
 def intro():
-    print('''
-    You have to make a decision, either take the elevator
-    to the south exit or the stairs to the north exit.
-    ''')
+    print('You have to make a decision, either take the elevator')
+    print('to the south exit or the stairs to the north exit.')
     print('Make a decision: type stairs or elevator')
     choice = input()
     ans = 'incorrect'   
     while(ans == 'incorrect'):
-        if choice.lower() == 'stairs':
+        if choice.lower().strip() == 'stairs':
             option_stairs()
             ans = 'correct'
-        elif choice.lower() == 'elevator':
+        elif choice.lower().strip() == 'elevator':
             option_elevator()
             ans = 'correct'
         else:
@@ -42,26 +37,22 @@ def intro():
 
 
 def option_stairs():
-    print('''
-    You run down the stairs but you only reach half a floor down
-    because you see the fire in the end of the stairs.''')
+    print('You run down the stairs but you only reach half a floor down')
+    print('because you see the fire in the end of the stairs.')
     time.sleep(3)
 
-    print('''
-    You see a distinguisher a distinguisher on the wall
-    but also a door to a fire lather. Would you rather
-    distiguish or use the lather?''')
-
-    time.sleep(2)
+    print('You see a distinguisher a distinguisher on the wall')
+    print('but also a door to a fire lather. Would you rather')
+    print('distiguish or use the lather? \n')
     print('Type: distinguish or lather')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
-        if choice == 'distinguish':
+        if choice.lower().strip() == 'distinguish':
             print('Awesome you made it!')
             option_distinguish_lather()
             ans = 'correct'
-        elif choice == 'lather':
+        elif choice.lower().strip() == 'lather':
             print('To much smoke in the lather!')
             dead()
             ans = 'correct'
@@ -71,24 +62,24 @@ def option_stairs():
 
 
 def option_elevator():  
-    print('You press the buttom to the elevator.')
+    print('You press the buttom to the elevator. \n')
     time.sleep(3)
-    print('Yes, it is working')
+    print('Yes, the elevator is working \n')
     time.sleep(3)
-    print('but what now?, it stopped!')
-    print('You manage to get out from the elevator')
-    print('You are now at the third floor.')
-    print('''
-    You see a fire lather and a hole in the ground.
-    Do you rather take the lather or jump down the hole? ''')
+    print('but what now?, it stopped! /n')
+    time.sleep(1)
+    print('You manage to get out from the elevator /n')
+    print('You are now at the third floor. /n')
+    print('You see a fire lather and a hole in the ground.')
+    print('Do you rather take the lather or jump down the hole? \n')
     print('Type: lather or hole?')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
-        if choice == 'lather':
+        if choice.lower().strip() == 'lather':
             option_distinguish_lather()
             ans = 'correct'
-        elif choice == 'hole':
+        elif choice.lower().strip() == 'hole':
             option_hole()
             ans = 'correct'
         else:
@@ -97,24 +88,21 @@ def option_elevator():
 
 
 def option_distinguish_lather():
-    print('''
-    You come to a room on the northside but the stairs 
-    down to the bottomfloor is blocked.''')
-    
-    print('''
-    You need to either jump out from the window
-    or jump down from a hole in the ground that you suppose 
-    leads to the first floor.''')
+    time.sleep(2)
+    print('down to the bottomfloor is blocked.')
+    print('You need to either jump out from the window')
+    print('or jump down from a hole in the ground that')
+    print('you suppose leads to the first floor.')
     time.sleep(1)
     print('Type: window or hole?')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
-        if choice == 'window':
+        if choice.lower.strip == 'window':
             print('The ground is made of concrete.')
             dead()
             ans = 'correct'
-        elif choice == 'hole':
+        elif choice.lower().strip() == 'hole':
             ambulance()
             ans = 'correct'
         else:
@@ -123,27 +111,25 @@ def option_distinguish_lather():
 
 
 def option_hole():
-    
-    print('''
-    The hole lead you down to the secound floor 
-    Now you see a pole that takes you down to floor one and a package 
-    of dynamite.''')
-    print('''
-    Do you rather use the dynamite to explode the wall
-    or glide down the pole?''')
+    time.sleep(2)
+    print('The hole lead you down to the secound floor \n')
+    print('Now you see a pole that takes you down to floor one')
+    print('and a package of dynamite. \n')
+    print('Do you rather use the dynamite to explode the wall')
+    print('or glide down the pole? \n')
     time.sleep(1)
     print('Type: dynamite or pole?')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
-        if choice == 'dynamite':
+        if choice.lower().strip() == 'dynamite':
             tnt_countdown(t)
             time.sleep(1)
             print('The wall exploded and you can jump out!')
             print('The ground is soft so you can survive the jump.')
             ambulance()
             ans = 'correct'
-        elif choice == 'pole':
+        elif choice.lower().strip() == 'pole':
             print('There is a fire where you ended up.')
             dead()
             ans = 'correct'
@@ -153,18 +139,17 @@ def option_hole():
 
 
 def ambulance():
-    print('''
-    You have been breathing in quite a lot of smoke
-    would you like to call an ambulance?
-    ''')
+    time.sleep(2)
+    print('You have been breathing in quite a lot of smoke')
+    print('would you like to call an ambulance? \n')
     print('Make a decision: type call or skip')
     choice = input()
     ans = 'incorrect'   
     while(ans == 'incorrect'):
-        if choice.lower() == 'call':
+        if choice.lower().strip == 'call':
             call_ambulance()
             ans = 'correct'
-        elif choice.lower() == 'skip':
+        elif choice.lower().strip == 'skip':
             dead()
             ans = 'correct'
         else:
@@ -173,11 +158,10 @@ def ambulance():
 
 
 def call_ambulance():
-    print('''
-    Hi and welcome to the SOS central! To help you
-    we need your location!
-    ''')
-    print('Give out your location, type the city you are at!')
+    time.sleep(3)
+    print('Hi and welcome to the SOS central! To help you')
+    print('we need your location! \n')
+    print('Give out your location, type the city you are at! \n')
     choice = input()
     ans = 'incorrect'   
     while(ans == 'incorrect'):
@@ -185,8 +169,8 @@ def call_ambulance():
             survive()
             ans = 'correct'
         else:
-            print('Type your location before the bomb explode')
-            choice = input()
+            print('Remember your location next time! \n')
+            dead()
 
     
 def dead():

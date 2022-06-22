@@ -18,8 +18,10 @@ print('BOOOM')
 time.sleep(2)
 print('BOOOM')
 time.sleep(2)
+
 print('What was that, the hole building is shaking.')
 time.sleep(2)
+
 print('We hear from the tourguides radio that two bombs has exploded.')
 print('And it caused fire, You got 10 secounds to escape!') 
 time.sleep(3)
@@ -52,7 +54,7 @@ while timer > 0:
                 ans = 'correct'
             elif choice.lower() == 'elevator':
                 option_elevator()
-                ans == 'correct'
+                ans = 'correct'
             else:
                 print('Type stairs or elevator please!')
                 choice = input()
@@ -76,11 +78,11 @@ while timer > 0:
             if choice == 'distinguish':
                 print('Awesome you made it!')
                 option_distinguish_lather()
-                ans == 'correct'
+                ans = 'correct'
             elif choice == 'lather':
                 print('To much smoke in the lather!')
                 dead()
-                ans == 'correct'
+                ans = 'correct'
             else:
                 print('Type distinguish or lather please!')
                 choice = input()
@@ -102,10 +104,10 @@ while timer > 0:
         while(ans == 'incorrect'):
             if choice == 'lather':
                 option_distinguish_lather()
-                ans == 'correct'
+                ans = 'correct'
             elif choice == 'hole':
                 option_hole()
-                ans == 'correct'
+                ans = 'correct'
             else:
                 print('Type lather or hole please!')
                 choice = input()
@@ -127,10 +129,10 @@ while timer > 0:
             if choice == 'window':
                 print('The ground is made of concrete.')
                 dead()
-                ans == 'correct'
+                ans = 'correct'
             elif choice == 'hole':
                 survive()
-                ans == 'correct'
+                ans = 'correct'
             else:
                 print('Type window or hole please!')
                 choice = input()
@@ -149,18 +151,21 @@ while timer > 0:
         ans = 'incorrect'
         while(ans == 'incorrect'):
             if choice == 'dynamite':
+                
                 tnt_countdown(t)
                 time.sleep(1)
                 print('The wall exploded and you can jump out!')
                 print('The ground is soft so you can survive the jump.')
                 survive()
-                ans == 'correct'
+                ans = 'correct'
+               
             elif choice == 'pole':
+                
                 print('There is a fire where you ended up.')
                 dead()
-                ans == 'correct'
+                ans = 'correct'
             else:
-                print('Type lather or hole please!')
+                print('Type dynamite or pole please!')
                 choice = input()
 
     def dead():

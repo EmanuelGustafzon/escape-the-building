@@ -23,23 +23,26 @@ print('What was that, the hole building is shaking.')
 time.sleep(2)
 
 print('We hear from the tourguides radio that two bombs has exploded.')
-print('And it caused fire, You got 10 secounds to escape!') 
+print('And it caused fire, You got 20 secounds to escape!') 
 time.sleep(3)
 
 
 def countdown():
     global timer 
-    timer = 10
-    for x in range(10):
+    timer = 20
+    for x in range(20):
         timer -= 1
         time.sleep(1)
     print('BOOM! the third bomb exploded!')
+    print('Sorry you were to slow')
+    print('press enter to restart')
 
 
 countdown_thread = threading.Thread(target=countdown)
 countdown_thread.start()
 
 while timer > 0:
+
     def intro():
         print('''
         You have to make a decision, either take the elevator
@@ -47,19 +50,32 @@ while timer > 0:
         ''')
         print('Make a decision: type stairs or elevator')
         choice = input()
-        ans = 'incorrect'
+        ans = 'incorrect'   
         while(ans == 'incorrect'):
             if choice.lower() == 'stairs':
-                option_stairs()
+                if timer == 0:
+                    break
+                else:
+                    option_stairs()
                 ans = 'correct'
             elif choice.lower() == 'elevator':
-                option_elevator()
+                if timer == 0:
+                    break
+                else:
+                    option_elevator()
                 ans = 'correct'
             else:
-                print('Type stairs or elevator please!')
-                choice = input()
-    
+                if timer == 0:
+                    break
+                else:
+                    print('Type stairs or elevator please!')
+                    choice = input()
+        
+    if timer == 0:
+        break
+
     def option_stairs():
+    
         print('''
         You run down the stairs but you only reach half a floor down
         because you see the fire in the end of the stairs.''')
@@ -76,18 +92,27 @@ while timer > 0:
         ans = 'incorrect'
         while(ans == 'incorrect'):
             if choice == 'distinguish':
-                print('Awesome you made it!')
-                option_distinguish_lather()
+                if timer == 0:
+                    break
+                else:
+                    print('Awesome you made it!')
+                    option_distinguish_lather()
                 ans = 'correct'
             elif choice == 'lather':
-                print('To much smoke in the lather!')
-                dead()
+                if timer == 0:
+                    break
+                else:
+                    print('To much smoke in the lather!')
+                    dead()
                 ans = 'correct'
             else:
-                print('Type distinguish or lather please!')
-                choice = input()
+                if timer == 0:
+                    break
+                else:
+                    print('Type distinguish or lather please!')
+                    choice = input()
 
-    def option_elevator():
+    def option_elevator():  
         print('You press the buttom to the elevator.')
         time.sleep(3)
         print('Yes, it is working')
@@ -103,16 +128,26 @@ while timer > 0:
         ans = 'incorrect'
         while(ans == 'incorrect'):
             if choice == 'lather':
-                option_distinguish_lather()
+                if timer == 0:
+                    break
+                else:
+                    option_distinguish_lather()
                 ans = 'correct'
             elif choice == 'hole':
-                option_hole()
+                if timer == 0:
+                    break
+                else:
+                    option_hole()
                 ans = 'correct'
             else:
-                print('Type lather or hole please!')
-                choice = input()
+                if timer == 0:
+                    break
+                else:
+                    print('Type lather or hole please!')
+                    choice = input()
 
     def option_distinguish_lather():
+        
         print('''
         You come to a room on the northside but the stairs 
         down to the bottomfloor is blocked.''')
@@ -127,17 +162,27 @@ while timer > 0:
         ans = 'incorrect'
         while(ans == 'incorrect'):
             if choice == 'window':
-                print('The ground is made of concrete.')
-                dead()
+                if timer == 0:
+                    break
+                else:
+                    print('The ground is made of concrete.')
+                    dead()
                 ans = 'correct'
             elif choice == 'hole':
-                survive()
+                if timer == 0:
+                    break
+                else:
+                    survive()
                 ans = 'correct'
             else:
-                print('Type window or hole please!')
-                choice = input()
+                if timer == 0:
+                    break
+                else:
+                    print('Type window or hole please!')
+                    choice = input()
 
     def option_hole():
+        
         print('''
         The hole lead you down to the secound floor 
         Now you see a pole that takes you down to floor one and a package 
@@ -151,23 +196,29 @@ while timer > 0:
         ans = 'incorrect'
         while(ans == 'incorrect'):
             if choice == 'dynamite':
-                
-                tnt_countdown(t)
-                time.sleep(1)
-                print('The wall exploded and you can jump out!')
-                print('The ground is soft so you can survive the jump.')
-                survive()
-                ans = 'correct'
-               
+                if timer == 0:
+                    break
+                else:
+                    tnt_countdown(t)
+                    time.sleep(1)
+                    print('The wall exploded and you can jump out!')
+                    print('The ground is soft so you can survive the jump.')
+                    survive()
+                    ans = 'correct'
             elif choice == 'pole':
-                
-                print('There is a fire where you ended up.')
-                dead()
+                if timer == 0:
+                    break
+                else:
+                    print('There is a fire where you ended up.')
+                    dead()
                 ans = 'correct'
             else:
-                print('Type dynamite or pole please!')
-                choice = input()
-
+                if timer == 0:
+                    break
+                else:
+                    print('Type dynamite or pole please!')
+                    choice = input()
+        
     def dead():
         print('You died!')
 
@@ -186,6 +237,6 @@ while timer > 0:
     t = 3
 
     intro()
-    if timer == 0:
-        break
+    
+   
         

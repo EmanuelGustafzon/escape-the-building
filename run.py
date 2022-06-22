@@ -4,23 +4,23 @@ import time
 def welcome(): 
     print('Welcome to Escape The Building \n')
     name = ''
-    while name == ' ':
+    while name == '':
         name = input('type yor name here:').strip()
     time.sleep(1)
-    print(f'welcome {name} to this adventure!')
+    print(f'welcome {name} to this adventure! \n')
     time.sleep(3)
     print(f'{name} is a tourist in London.') 
     print('Right now your at a tour in a') 
-    print('museum at the top floor.')
-    print('Two bombs has exploded in the museum.\n')
-    print('It caused fire and you have to escape')
+    print('museum at the top floor. \n')
+    print('Two bombs has exploded in the museum.')
+    print('It caused fire and you have to escape \n')
     time.sleep(3)
-    intro()
+    start_game()
 
 
-def intro():
+def start_game():
     print('You have to make a decision, either take the elevator')
-    print('to the south exit or the stairs to the north exit.')
+    print('to the south exit or the stairs to the north exit. \n')
     print('Make a decision: type stairs or elevator')
     choice = input()
     ans = 'incorrect'   
@@ -38,19 +38,18 @@ def intro():
 
 def option_stairs():
     print('You run down the stairs but you only reach half a floor down')
-    print('because you see the fire in the end of the stairs.')
+    print('because you see the fire in the end of the stairs. \n')
     time.sleep(3)
-
-    print('You see a distinguisher a distinguisher on the wall')
-    print('but also a door to a fire lather. Would you rather')
-    print('distiguish or use the lather? \n')
+    print('You see a distinguisher on the wall')
+    print('but also a door to a fire lather \n')
+    print('would you rather distiguish or use the lather? \n')
     print('Type: distinguish or lather')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'distinguish':
-            print('Awesome you made it!')
-            option_distinguish_lather()
+            print('Awesome you distinguished the fire! \n')
+            option_distinguish()
             ans = 'correct'
         elif choice.lower().strip() == 'lather':
             print('To much smoke in the lather!')
@@ -66,9 +65,9 @@ def option_elevator():
     time.sleep(3)
     print('Yes, the elevator is working \n')
     time.sleep(3)
-    print('but what now?, it stopped! /n')
+    print('but what now?, it stopped! \n')
     time.sleep(1)
-    print('You manage to get out from the elevator /n')
+    print('You manage to get out from the elevator \n')
     print('You are now at the third floor. /n')
     print('You see a fire lather and a hole in the ground.')
     print('Do you rather take the lather or jump down the hole? \n')
@@ -77,7 +76,8 @@ def option_elevator():
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'lather':
-            option_distinguish_lather()
+            print('You ended up in a room on fire')
+            dead()
             ans = 'correct'
         elif choice.lower().strip() == 'hole':
             option_hole()
@@ -87,18 +87,18 @@ def option_elevator():
             choice = input()
 
 
-def option_distinguish_lather():
+def option_distinguish():
     time.sleep(2)
-    print('down to the bottomfloor is blocked.')
+    print(' The stairs down to the bottomfloor is blocked. \n')
     print('You need to either jump out from the window')
     print('or jump down from a hole in the ground that')
-    print('you suppose leads to the first floor.')
+    print('you suppose leads to the first floor. \n')
     time.sleep(1)
     print('Type: window or hole?')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
-        if choice.lower.strip == 'window':
+        if choice.lower().strip() == 'window':
             print('The ground is made of concrete.')
             dead()
             ans = 'correct'
@@ -146,10 +146,10 @@ def ambulance():
     choice = input()
     ans = 'incorrect'   
     while(ans == 'incorrect'):
-        if choice.lower().strip == 'call':
+        if choice.lower().strip() == 'call':
             call_ambulance()
             ans = 'correct'
-        elif choice.lower().strip == 'skip':
+        elif choice.lower().strip() == 'skip':
             dead()
             ans = 'correct'
         else:
@@ -174,12 +174,12 @@ def call_ambulance():
 
     
 def dead():
-    print('You died!')
+    print('You died! \n')
     welcome()
     
 
 def survive():
-    print('congratulations you made it!')
+    print('congratulations you made it! \n')
     welcome()
 
 

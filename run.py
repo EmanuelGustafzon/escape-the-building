@@ -1,6 +1,7 @@
 import time
 import pyfiglet
-  
+from colorama import Fore, Back, Style
+
 
 def welcome():
     result = pyfiglet.figlet_format('Escape the Building', font="digital")
@@ -217,12 +218,12 @@ def call_ambulance():
 
     
 def dead():
-    print('\nYou died!\n')
+    print(Fore.RED +'\nYou died!\n')
     welcome()
     
 
 def survive():
-    print('\nCongratulations you made it! \n')
+    print(Fore.GREEN +'\nCongratulations you made it! \n')
     welcome()
 
 

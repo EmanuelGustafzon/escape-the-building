@@ -2,108 +2,77 @@
 A game for anyone who are up for a challenge and wants to read a story at the same time. The game is built in python as a project for Code Institute. 
 ## https://escape-the-building.herokuapp.com/.
 
-![Resposivity](/assets/images/IMG-1525.jpg)
+## User Experience
 
-## Features 
-- Navigation
-  - Score counter so that the user can see how he or she is doing.
-  - Social media links to my Github and Linkedin account. This is for employers to see my profile, experience and skills.
+ - Target Audience 
 
-![Header](/assets/images/score.jpg)
+   - Users who wants a text based adventure game that wants some action. The game is designed to be rappid and the user needs to take many decisions in a short period of time.
+   - Users who wants a bit of a challenge where they sometimes needs to stop and think. I am thinking about the code to open the door and the last question where you need to remember what been said in the beginning of the game.
 
-- Landing page
-  - The first thing the user sees is an introduction to the quiz and a run buttom.
-  - It would be confusing for the user to only see a quiz when landing on the page. That is why it is hidden in the beginning and instead a introduction to the quiz is shown. 
+ - The flow of the game
+   
+   - The game does not break at any point. if the user fails the mission it starts over again.
+   - The user gets clear instructions to learn and understand the game.
+   - If the user makes a type error, the user simply gets the option to try again.
 
-![Landing page](/assets/images/Sk%C3%A4rmbild%20(114).png)
- 
-- Quiz
-  - The quiz has a total amount of 100 questions. This is questions to lear phrases and words in spanish. The purpose is that the user will learn spanish in an entertaining way. 
-  - It would be tiereing to go through a 100 questions at ones. That is why every time you play the quiz you get 15 questions to answer. The 15 questions is totally random from the collection of 100 spanish phrases. 
+## The Design of the Game.
 
-![Quiz](/assets/images/Sk%C3%A4rmbild%20(115).png)
+- This is the road map for the game. The user gets two options and have to decide one of them. The users input will affect the next output will be and how the story continues. If the user come into a room of fire, jumps out the window or make a mistake with the ambualnce the user die and the game starts over.
 
-- Give answer
-  - When the user have pressed the answer she or he thinks is correct the correct answer is shown directly so the user can learn from the game. 
-  - If the answer is correct the user get points.
-![Answer](/assets/images/Sk%C3%A4rmbild%20(116).png)
+  ![Road Map](/images/Road%20Map%20for%20Escape%20the%20Building.jpg)
 
-- Finished Quiz section
-  - After the user have answered the 15 questions the final score is shown up. 
-  - The user also get the option to restart the quiz.  
+  ## Technologies
 
-![Finished quiz round](/assets/images/Sk%C3%A4rmbild%20(117).png)
+- Python
 
+ - Python libraries
+  - Colorama
+  - pyfiglet
+  - emoji
+  - time
+
+- GitHub
+- GitPod
+- Herokum
+- PIP8 Online 
+- Lucid
 
   ## Testing 
 
-  - I have tested and the website works on Chrome, Firefox and microsoft edge browsers on mobile, tablet and desktop.
-  - I used the developer tool to confirm the website is responsive on all screen sizes. 
-  
+- I validated the game's code through PEP8 Online.
 
-  ## Validator
 
-- HTML 
-  - No errors were found when passing throughout the official W3C Validator.
+   ![PEP8 Validated Code](/images/Sk%C3%A4rmbild%20(125).png)
 
-- CSS
-  - No errors were found when passing throughout the official W3C Validator.
-
-- Javascript
-  - No errors where found in the JsHint validator. 
-
-- Accessability 
-  - I have confrimed that the accessabilty is good on both desktop and mobile version through Chromes developer tool. 
-
-  - Desktop
-
-    ![Desktop Accessibility](/assets/images/IMG-1524.jpg)
-
-  - Mobile 
-
-    ![Mobile Accessibility](/assets/images/IMG-1523.jpg)
-
-  ## User Expereince
-
-  - It is easy to learn how the quiz works. The user gets all the information needed to understand and play the quiz.
-  - The buttoms are big and easy for the users to see and press the right button.
-  - The user get a answer immigetly after answering a question of what answer was correct. This is good for the user to learn the spanish phrases in the quiz. 
-
-  
-  ## Bugs and Errors
+  ## Bugs 
 
 - Solved
+  - At first the game did not run at all. The reason for this was that the first function (def welcome():) needed to be called in the end of the game.
+  - The Python libraries did not work when the site was deployed. This cloud be fixed by typing pip freeze > requirements.txt to add those libraries to the requirements.txt file.
 
-  - It was a bug in the score counter. It did not work becuase the user always got points even if the user gave the wrong answer. To solve this I needed to remove the oldscore variable from the setStatusClass function to the selectAnswer function in the JavaScript. 
-
-- Unsolved bugs
-    
-  - None 
+- Unsolved
+  - A timer was supposed to be set in the game. The intention was that there would be a third bomb in the building and the user needs to get out from the building in a certain time. I used the thread time method to make the timer countdown at the same time as the user plays the game. The hole game code was wrapped in a while loop. If the timer would be equal to zero the while loop break. The bug I encountered was that the timer counted down once and did not reset after the time ran out, the user won the game or the user lost the game. Because of time I decided to get rid of the timer and keep it as it is.
 
 
   ## Other Featured that can be implemented
    
-  - There is many things that can improve this quiz. First of all it would be good to have a level system so the more the user learn the more advanced the questions become. The secound feature is to have a audio button so that the user can learn to pronaunce the phrases.
+- The one feature that I want to implement is a stopwatch. By using a threading timer the game can run at the same time as the timer and when the user has played a certain amount of the time the user fails the mission and needs to start over.
+- The game has a lot of potential to expand with more paths and tricky questions. 
 
   ## Deployment 
 
-  This site was depolyed to Github pages. The steps of deployment was following. 
+- GitHub and GitPod.
 
-- I used gitpod to code the webiste and by using the terminal and the commands, git add ., git commit -m"" and git push I cloud get the files into GitHub.
-- In my GitHub account I cloud deploy the website by first of all open the right repositry. 
-- In the repositry I opened settings.
-- From settings I went into pages. 
-- I changed the source branch to "Main".
-- Then I pressed save and the URL were created and website deployed.
+  - Step one: Create new repositry.
+
+- Herokun
+
+  - Step one: 
 
   ## Credits 
 - Documentation from Code Institute
 - Code institute GitPod tamplate. 
-- Youtube video that helped me get started: https://www.youtube.com/watch?v=riDzcEQbX6k
-- Youtube video that helped me understand arrow functions: https://youtu.be/h33Srr5J9nY
-- Photos from Unsplash: https://unsplash.com/ 
-- Fonts from fontawsome: https://fontawesome.com/
-- Colors from Coolers: https://coolors.co/
-- Optimizing photos in my computers standard photo app
-- support from tutors and the slack community.
-- Spanish questions: https://www.fluentu.com/blog/spanish/common-spanish-phrases/#toc_7
+- My mentor Spencer
+- The slack community
+- This article: https://www.askpython.com/python/text-based-adventure-game'
+- Stack Overflow

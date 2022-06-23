@@ -1,6 +1,7 @@
 import time
 from colorama import Fore
 import pyfiglet
+import emoji
 
 
 def welcome():
@@ -13,11 +14,12 @@ def welcome():
     time.sleep(1)
     print(f'\nwelcome {name} to this adventure \n')
     time.sleep(3)
-    print(f'{name} is a tourist in London.') 
-    print('Right now your at a tour in a') 
+    print(f'{name} is a tourist in London.')
+    print('Right now your at a tour in a')
     print('museum at the top floor. \n')
     time.sleep(2)
-    print('Two bombs has exploded in the museum.')
+    print(emoji.emojize('Two bombs has exploded in the museum.'))
+    print(emoji.emojize(':collision:'))
     time.sleep(2)
     print('\nIt caused fire and you have to escape.\n')
     time.sleep(3)
@@ -30,7 +32,7 @@ def start_game():
     time.sleep(3)
     print('Make a decision: type stairs or elevator\n')
     choice = input()
-    ans = 'incorrect'   
+    ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'stairs':
             option_stairs()
@@ -71,7 +73,7 @@ def option_stairs():
             choice = input()
 
 
-def option_elevator():  
+def option_elevator():
     time.sleep(1)
     print('\nYou press the buttom to the elevator.\n')
     time.sleep(2)
@@ -184,7 +186,7 @@ def ambulance():
     time.sleep(2)
     print('Make a decision: type call or skip\n')
     choice = input()
-    ans = 'incorrect'   
+    ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'call':
             numbers = [9, 1, 1]
@@ -208,7 +210,7 @@ def call_ambulance():
     time.sleep(2)
     print('Give out your location, type the city you are at!\n')
     choice = input()
-    ans = 'incorrect'   
+    ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'london':
             survive()
@@ -217,14 +219,16 @@ def call_ambulance():
             print('\nRemember your location next time!\n')
             dead()
 
-    
+
 def dead():
     print(Fore.RED + '\nYou died!\n')
+    print(emoji.emojize(':skull:'))
     welcome()
-    
+
 
 def survive():
     print(Fore.GREEN + '\nCongratulations you made it! \n')
+    print(emoji.emojize(':confetti_ball:'))
     welcome()
 
 

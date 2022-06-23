@@ -1,11 +1,9 @@
 import time
-import pyfiglet
 from colorama import Fore
 
 
 def welcome():
-    result = pyfiglet.figlet_format('Escape the Building', font="digital")
-    print(Fore.YELLOW + result)
+    print(Fore.YELLOW + 'Escape the Building')
     print(Fore.BLUE)
     name = ''
     while name == '':

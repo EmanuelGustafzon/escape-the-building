@@ -1,11 +1,12 @@
 import time
 import pyfiglet
-from colorama import Fore, Back, Style
+from colorama import Fore
 
 
 def welcome():
     result = pyfiglet.figlet_format('Escape the Building', font="digital")
-    print(result)
+    print(Fore.YELLOW + result)
+    print(Fore.BLUE)
     name = ''
     while name == '':
         name = input('type yor name here:').strip()
@@ -218,12 +219,12 @@ def call_ambulance():
 
     
 def dead():
-    print(Fore.RED +'\nYou died!\n')
+    print(Fore.RED + '\nYou died!\n')
     welcome()
     
 
 def survive():
-    print(Fore.GREEN +'\nCongratulations you made it! \n')
+    print(Fore.GREEN + '\nCongratulations you made it! \n')
     welcome()
 
 

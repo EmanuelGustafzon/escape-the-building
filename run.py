@@ -1,9 +1,11 @@
 import time
 from colorama import Fore
+import pyfiglet
 
 
 def welcome():
-    print(Fore.YELLOW + 'Escape the Building')
+    result = pyfiglet.figlet_format("Escape The Building", font="digital")
+    print(Fore.YELLOW + result)
     print(Fore.BLUE)
     name = ''
     while name == '':
@@ -48,11 +50,11 @@ def option_stairs():
     print('because you see the fire in the end of the stairs.\n')
     time.sleep(3)
     print('You see a distinguisher on the wall')
-    print('but also a door to a fire lather \n')
+    print('but also a door to a fire ladder \n')
     time.sleep(1)
-    print('would you rather distiguish or use the lather? \n')
+    print('would you rather distiguish or use the ladder? \n')
     time.sleep(1)
-    print('Type: distinguish or lather\n')
+    print('Type: distinguish or ladder\n')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
@@ -65,7 +67,7 @@ def option_stairs():
             dead()
             ans = 'correct'
         else:
-            print('\nType distinguish or lather please!\n')
+            print('\nType distinguish or ladder please!\n')
             choice = input()
 
 
@@ -82,13 +84,13 @@ def option_elevator():
     print('You are now at the third floor.\n')
     time.sleep(2)
     print('You see a fire lather and a hole in the ground.')
-    print('Do you rather take the lather or jump down the hole?\n')
+    print('Do you rather take the ladder or jump down the hole?\n')
     time.sleep(1)
-    print('Type: lather or hole?\n')
+    print('Type: ladder or hole?\n')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
-        if choice.lower().strip() == 'lather':
+        if choice.lower().strip() == 'ladder':
             print('You ended up in a room on fire')
             dead()
             ans = 'correct'
@@ -96,7 +98,7 @@ def option_elevator():
             option_hole()
             ans = 'correct'
         else:
-            print('\nType lather or hole please!\n')
+            print('\nType ladder or hole please!\n')
             choice = input()
 
 

@@ -40,6 +40,12 @@ def welcome():
     clear() 
     result = pyfiglet.figlet_format("Escape The Building", font="digital")
     print(Fore.YELLOW + result) 
+    print('Instruction')
+    print('This is a text based adventure game. You will be guided through')
+    print('a story and you you will get different options along the game.')
+    print('The story will continue as you choose different paths.')
+    print('If you for some reason would like to quit the game,')
+    print('Type quit instead of one of the two options suggested.')
     print(Fore.BLUE)
     global name
     name = ''
@@ -78,7 +84,7 @@ def start_game():
             option_elevator()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
-            sys.exit() 
+            welcome() 
             ans = 'correct'
         else:
             print('\nType stairs or elevator please!\n')

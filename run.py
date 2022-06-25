@@ -6,13 +6,13 @@ import emoji
 
 def welcome():
     result = pyfiglet.figlet_format("Escape The Building", font="digital")
-    print(Fore.YELLOW + result)
+    print(Fore.YELLOW + result) 
     print(Fore.BLUE)
     name = ''
     while name == '':
         name = input('type yor name here:').strip()
     time.sleep(1)
-    print(f'\nWelcome {name} to this adventure \n')
+    print(f'\nWelcome {name} to this adventure. \n')
     time.sleep(2)
     print(f'{name} is a tourist in London.')
     print('Right now your at a tour in a')
@@ -48,13 +48,13 @@ def start_game():
 def option_stairs():
     time.sleep(3)
     print('\nYou run down the stairs but you only reach half a floor down.')
-    time.sleep(3)
+    time.sleep(2)
     print('because you see the fire in the end of the stairs.\n')
     time.sleep(4)
     print('You see a distinguisher on the wall')
-    print('but also a door to a fire ladder \n')
+    print('but also a door to a fire ladder. \n')
     time.sleep(2)
-    print('would you rather distiguish or use the ladder? \n')
+    print('Would you rather distiguish or use the ladder? \n')
     time.sleep(1)
     print('Type: distinguish or ladder\n')
     choice = input()
@@ -139,6 +139,7 @@ def option_remove():
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.strip() == '1991':
+            print('\nThat is right!\n')
             ambulance()
             ans = 'correct'
         else:

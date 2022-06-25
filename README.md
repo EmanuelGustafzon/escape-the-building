@@ -40,10 +40,10 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
 - Python
 
  - Python libraries
-  - Colorama
-  - pyfiglet
-  - emoji
-  - time
+   - Colorama
+   - pyfiglet
+   - emoji
+   - time
 
 - GitHub
   - Version control system.

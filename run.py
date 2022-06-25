@@ -1,4 +1,5 @@
 import time
+import sys
 from os import system, name
 from colorama import Fore
 import pyfiglet
@@ -6,6 +7,9 @@ import emoji
 
 
 def clear():
+    """
+    This is a comment
+    """
     if name == 'nt':
         _ = system('cls')
     else:
@@ -13,6 +17,9 @@ def clear():
 
 
 def restart():
+    """
+    This is a comment
+    """
     print(Fore.BLUE)
     print('type yes if you want to restart!')
     choice = input()
@@ -27,6 +34,9 @@ def restart():
 
 
 def welcome():  
+    """
+    This is a comment
+    """
     clear() 
     result = pyfiglet.figlet_format("Escape The Building", font="digital")
     print(Fore.YELLOW + result) 
@@ -34,7 +44,7 @@ def welcome():
     global name
     name = ''
     while name == '':
-        name = input('type yor character name here:').strip()
+        name = input('Choose a character name here:').strip()
     time.sleep(1)
     print(f'\nWelcome {name} to this adventure. \n')
     time.sleep(2)
@@ -51,6 +61,9 @@ def welcome():
 
 
 def start_game():
+    """
+    This is a comment
+    """
     print('You have to make a decision, either take the elevator')
     print('to the south exit or the stairs to the north exit.\n')
     time.sleep(4)
@@ -64,12 +77,18 @@ def start_game():
         elif choice.lower().strip() == 'elevator':
             option_elevator()
             ans = 'correct'
+        elif choice.lower().strip() == 'quit':
+            sys.exit() 
+            ans = 'correct'
         else:
             print('\nType stairs or elevator please!\n')
             choice = input()
 
 
 def option_stairs():
+    """
+    This is a comment
+    """
     time.sleep(3)
     print('\nYou run down the stairs but you only reach half a floor down.')
     time.sleep(2)
@@ -98,6 +117,9 @@ def option_stairs():
 
 
 def option_elevator():
+    """
+    This is a comment
+    """
     time.sleep(1)
     print('\nYou press the buttom to the elevator.\n')
     time.sleep(2)
@@ -129,6 +151,9 @@ def option_elevator():
 
 
 def option_distinguish():
+    """
+    This is a comment
+    """
     time.sleep(2)
     print('\nThe stairs down to the bottomfloor is blocked.\n')
     time.sleep(3)
@@ -152,6 +177,9 @@ def option_distinguish():
 
 
 def option_remove():
+    """
+    This is a comment
+    """
     time.sleep(3)
     print('\nYou could remove the rocks!\n')
     time.sleep(3)
@@ -172,6 +200,9 @@ def option_remove():
 
 
 def option_hole():
+    """
+    This is a comment
+    """
     time.sleep(2)
     print('\nThe hole lead you down to the secound floor \n')
     time.sleep(3)
@@ -204,6 +235,9 @@ def option_hole():
 
 
 def ambulance():
+    """
+    This is a comment
+    """
     time.sleep(3)
     print('\nYou have been breathing in quite a lot of smoke')
     time.sleep(2)
@@ -229,6 +263,9 @@ def ambulance():
 
 
 def call_ambulance():
+    """
+    This is a comment
+    """
     time.sleep(3)
     print('\nHi and welcome to the SOS central! To help you')
     print('we need your location!\n')
@@ -246,13 +283,19 @@ def call_ambulance():
 
 
 def dead():
-    print(Fore.RED + f'\nYou died! {name}\n')
+    """
+    This is a comment
+    """
+    print(Fore.RED + f'\nYou died {name}!\n')
     print(emoji.emojize(':skull:'))
     time.sleep(3)
     restart()
 
 
 def survive():
+    """
+    This is a comment
+    """
     print(Fore.GREEN + f'\nCongratulations you made it {name}! \n')
     print(emoji.emojize(':confetti_ball:'))
     time.sleep(3)
@@ -260,6 +303,9 @@ def survive():
 
 
 def tnt_countdown(t):
+    """
+    This is a comment
+    """
     import time
     print('Waiting for the dynamite to explode!!!')
     while t >= 0:

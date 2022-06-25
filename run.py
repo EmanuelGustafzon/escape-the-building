@@ -13,14 +13,14 @@ def welcome():
         name = input('type yor name here:').strip()
     time.sleep(1)
     print(f'\nwelcome {name} to this adventure \n')
-    time.sleep(3)
+    time.sleep(2)
     print(f'{name} is a tourist in London.')
     print('Right now your at a tour in a')
     print('museum at the top floor. \n')
-    time.sleep(2)
+    time.sleep(4)
     print(emoji.emojize('Two bombs has exploded in the museum.'))
     print(emoji.emojize(':collision:'))
-    time.sleep(2)
+    time.sleep(4)
     print('\nIt caused fire and you have to escape.\n')
     time.sleep(3)
     start_game()
@@ -29,7 +29,7 @@ def welcome():
 def start_game():
     print('You have to make a decision, either take the elevator')
     print('to the south exit or the stairs to the north exit.\n')
-    time.sleep(3)
+    time.sleep(4)
     print('Make a decision: type stairs or elevator\n')
     choice = input()
     ans = 'incorrect'
@@ -46,14 +46,14 @@ def start_game():
 
 
 def option_stairs():
-    time.sleep(2)
-    print('\nYou run down the stairs but you only reach half a floor down')
-    time.sleep(2)
-    print('because you see the fire in the end of the stairs.\n')
     time.sleep(3)
+    print('\nYou run down the stairs but you only reach half a floor down')
+    time.sleep(3)
+    print('because you see the fire in the end of the stairs.\n')
+    time.sleep(4)
     print('You see a distinguisher on the wall')
     print('but also a door to a fire ladder \n')
-    time.sleep(1)
+    time.sleep(2)
     print('would you rather distiguish or use the ladder? \n')
     time.sleep(1)
     print('Type: distinguish or ladder\n')
@@ -80,11 +80,11 @@ def option_elevator():
     print('Yes, the elevator is working\n')
     time.sleep(3)
     print('but what now?, it stopped!\n')
-    time.sleep(2)
+    time.sleep(3)
     print('You manage to get out from the elevator\n')
     time.sleep(2)
     print('You are now at the third floor.\n')
-    time.sleep(2)
+    time.sleep(3)
     print('You see a fire lather and a hole in the ground.')
     print('Do you rather take the ladder or jump down the hole?\n')
     time.sleep(1)
@@ -107,7 +107,7 @@ def option_elevator():
 def option_distinguish():
     time.sleep(2)
     print('\nThe stairs down to the bottomfloor is blocked.\n')
-    time.sleep(2)
+    time.sleep(3)
     print('You need to either jump out from the window or')
     print('try to remove the rocks blocking the stairs.\n')
     time.sleep(1)
@@ -128,12 +128,12 @@ def option_distinguish():
 
 
 def option_remove():
-    time.sleep(2)
+    time.sleep(3)
     print('\nYou cloud remove the rocks!\n')
-    time.sleep(2)
+    time.sleep(3)
     print('BUT.. there is code to get out from the door!')
     print('The code is the same as the year Python was released!\n')
-    time.sleep(1)
+    time.sleep(2)
     print('Type the right code!')
     choice = input()
     ans = 'incorrect'
@@ -147,15 +147,15 @@ def option_remove():
 
 
 def option_hole():
-    time.sleep(1)
-    print('\nThe hole lead you down to the secound floor \n')
     time.sleep(2)
+    print('\nThe hole lead you down to the secound floor \n')
+    time.sleep(3)
     print('Now you see a pole that takes you down to floor one')
     print('and a package of dynamite.\n')
     time.sleep(4)
     print('Do you rather use the dynamite to explode the wall')
     print('or glide down the pole? \n')
-    time.sleep(3)
+    time.sleep(1)
     print('Type: dynamite or pole?')
     choice = input()
     ans = 'incorrect'
@@ -223,12 +223,14 @@ def call_ambulance():
 def dead():
     print(Fore.RED + '\nYou died!\n')
     print(emoji.emojize(':skull:'))
+    time.sleep(3)
     welcome()
 
 
 def survive():
     print(Fore.GREEN + '\nCongratulations you made it! \n')
     print(emoji.emojize(':confetti_ball:'))
+    time.sleep(3)
     welcome()
 
 

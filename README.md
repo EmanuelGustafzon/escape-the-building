@@ -26,6 +26,15 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
 
   ![Road Map](/images/Road%20Map%20for%20Escape%20the%20Building.jpg)
 
+ ## Features
+ 
+ - The user make a input and gets a output. How the story continues depends on the users decisions.
+ - If the user type in an unvalid answer the user can try again because of a while loop.
+ - Package of dynamite that explodes by counting down from three.
+ - Heading in yellow and font digital from the pyfiglet library.
+ - The game instructions goes slowley by the time.sleep method.
+
+
   ## Technologies
 
 - Python

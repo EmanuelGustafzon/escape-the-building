@@ -12,7 +12,7 @@ def welcome():
     while name == '':
         name = input('type yor name here:').strip()
     time.sleep(1)
-    print(f'\nwelcome {name} to this adventure \n')
+    print(f'\nWelcome {name} to this adventure \n')
     time.sleep(2)
     print(f'{name} is a tourist in London.')
     print('Right now your at a tour in a')
@@ -47,7 +47,7 @@ def start_game():
 
 def option_stairs():
     time.sleep(3)
-    print('\nYou run down the stairs but you only reach half a floor down')
+    print('\nYou run down the stairs but you only reach half a floor down.')
     time.sleep(3)
     print('because you see the fire in the end of the stairs.\n')
     time.sleep(4)
@@ -77,7 +77,7 @@ def option_elevator():
     time.sleep(1)
     print('\nYou press the buttom to the elevator.\n')
     time.sleep(2)
-    print('Yes, the elevator is working\n')
+    print('Yes, the elevator is working.\n')
     time.sleep(3)
     print('but what now?, it stopped!\n')
     time.sleep(3)
@@ -85,7 +85,7 @@ def option_elevator():
     time.sleep(2)
     print('You are now at the third floor.\n')
     time.sleep(3)
-    print('You see a fire lather and a hole in the ground.')
+    print('You see a fire ladder and a hole in the ground.')
     print('Do you rather take the ladder or jump down the hole?\n')
     time.sleep(1)
     print('Type: ladder or hole?\n')

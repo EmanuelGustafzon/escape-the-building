@@ -1,16 +1,40 @@
 import time
+from os import system, name
 from colorama import Fore
 import pyfiglet
 import emoji
 
 
-def welcome():
+def clear():
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+
+def restart():
+    print(Fore.BLUE)
+    print('type yes if you want to restart!')
+    choice = input()
+    ans = 'incorrect'
+    while(ans == 'incorrect'):
+        if choice.lower().strip() == 'yes':
+            welcome()
+            ans = 'correct'
+        else:
+            print('\nType yes if you want to play again!\n')
+            choice = input()
+
+
+def welcome():  
+    clear() 
     result = pyfiglet.figlet_format("Escape The Building", font="digital")
     print(Fore.YELLOW + result) 
     print(Fore.BLUE)
+    global name
     name = ''
     while name == '':
-        name = input('type yor name here:').strip()
+        name = input('type yor character name here:').strip()
     time.sleep(1)
     print(f'\nWelcome {name} to this adventure. \n')
     time.sleep(2)
@@ -51,7 +75,7 @@ def option_stairs():
     time.sleep(2)
     print('because you see the fire in the end of the stairs.\n')
     time.sleep(4)
-    print('You see a distinguisher on the wall')
+    print('You see fire distinguisher on the wall')
     print('but also a door to a fire ladder. \n')
     time.sleep(2)
     print('Would you rather distiguish or use the ladder? \n')
@@ -61,11 +85,11 @@ def option_stairs():
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'distinguish':
-            print('Awesome you distinguished the fire! \n')
+            print('Awesome you distinguished the fire!\n')
             option_distinguish()
             ans = 'correct'
-        elif choice.lower().strip() == 'lather':
-            print('To much smoke in the lather!')
+        elif choice.lower().strip() == 'ladder':
+            print('To much smoke in the ladder!')
             dead()
             ans = 'correct'
         else:
@@ -123,13 +147,13 @@ def option_distinguish():
             option_remove()
             ans = 'correct'
         else:
-            print('\nType window or hole please!\n')
+            print('\nType window or remove please!\n')
             choice = input()
 
 
 def option_remove():
     time.sleep(3)
-    print('\nYou cloud remove the rocks!\n')
+    print('\nYou could remove the rocks!\n')
     time.sleep(3)
     print('BUT.. there is code to get out from the door!')
     print('The code is the same as the year Python was released!\n')
@@ -222,17 +246,17 @@ def call_ambulance():
 
 
 def dead():
-    print(Fore.RED + '\nYou died!\n')
+    print(Fore.RED + f'\nYou died! {name}\n')
     print(emoji.emojize(':skull:'))
     time.sleep(3)
-    welcome()
+    restart()
 
 
 def survive():
-    print(Fore.GREEN + '\nCongratulations you made it! \n')
+    print(Fore.GREEN + f'\nCongratulations you made it {name}! \n')
     print(emoji.emojize(':confetti_ball:'))
     time.sleep(3)
-    welcome()
+    restart()
 
 
 def tnt_countdown(t):

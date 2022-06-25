@@ -29,11 +29,12 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
  ## Features
  
  - The user make a input and gets a output. How the story continues depends on the users decisions.
- - If the user type in an unvalid answer the user can try again because of a while loop.
+ - If the user type in an unvalid answer the user can try again because of a while loop. If the user type the correct answer but it is with spaces before or after, with big letter or small letters or mixed big and small letters does not matter. 
  - Package of dynamite that explodes by counting down from three.
  - Heading in yellow and font digital from the pyfiglet library.
  - The game instructions goes slowley by the time.sleep method.
-
+ - User can choose a character name. If the user type nothing, the program will ask the user to put in something. Otherwise the User can have any username with any character.
+ - If the user either fail or complete the game, the user get the option to start over by pressing yes. If the user press yes the screen gets cleared.
 
   ## Technologies
 
@@ -44,6 +45,7 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
    - pyfiglet
    - emoji
    - time
+   - OS 
 
 - GitHub
   - Version control system.

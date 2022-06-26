@@ -28,7 +28,8 @@ def welcome():
     print('This is a text based adventure game. You will be guided through')
     print('a story and along with it you will have to take different')
     print('decisions and answer questions. The story depends on')
-    print('your decisions and some decisions might lead to death. Enjoy!')
+    print('your decisions and answers. Some of the steps you take')
+    print('will lead to death so be careful and best of luck!')
     print(Fore.BLUE)
     global name
     name = ''
@@ -37,7 +38,16 @@ def welcome():
     time.sleep(1)
     print(f'\nWelcome {name} to this adventure. \n')
     time.sleep(2)
-    start_game()
+    print('Type: r to start the game.')
+    choice = input()
+    ans = 'incorrect'
+    while(ans == 'incorrect'):
+        if choice.lower().strip() == 'r':
+            start_game()
+            ans = 'correct'
+        else:
+            print('\nType r you want to start the game!\n')
+            choice = input()
 
 
 def start_game():
@@ -316,7 +326,8 @@ def restart():
     """
     print(Fore.BLUE)
     print('Type: r to restart the game.')
-    print('Type: c to choose new character name.')
+    print('Type: c to choose new character name')
+    print('and read the game instructions.')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
@@ -327,7 +338,7 @@ def restart():
             welcome()
             ans = 'correct'
         else:
-            print('\nType yes if you want to play again!\n')
+            print('\nType: r or c please!\n')
             choice = input()
 
 

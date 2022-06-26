@@ -9,12 +9,14 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
    - Users who wants a text based adventure game that wants some action. The game is designed to be rappid and the user needs to take many decisions in a short period of time.
    - Users who wants a bit of a challenge where they sometimes needs to stop and think. I am thinking about the code to open the door and the last question where you need to remember what been said in the beginning of the game.
 
- - The flow of the game
+ - Good practices implemented to provide a good user experience.
    
-   - The game does not break at any point. if the user fails the mission it starts over again.
-   - The user gets clear instructions to learn and understand the game.
-   - If the user makes a type error, the user simply gets the option to try again.
-   - By using colors the uset get a better experience because it is easier to follow the game. that is why the text us red when the user has dies and it is game over, green when the user has survived and completed the game and yellow when the games starts over.
+   - The user get clear instructions to learn and understand the game.
+   - The story goes slowley so the user has time to read.
+   - If the user makes a typing error, the user simply gets the option to type again.
+   - The user can use blank spaces and use capital or non capital letters when typing. The program will still understand.
+   - Using colors to make it easier to follow the game.
+   - When user fails or wins the game, the user get the option to start again and with a clear screen. The user can either keep on with the same character name or change it for the next play.
 
 - User stories
   - As a user I want the game to go slow so I have time to read.
@@ -28,7 +30,7 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
 
  ## Features
  
- - The user make a input and gets a output. How the story continues depends on the users decisions.
+ - The user make a input and gets a output. How the story continues depends on the users input.
  - If the user type in an unvalid answer the user can try again because of a while loop. If the user type the correct answer but it is with spaces before or after, with big letter or small letters or mixed big and small letters does not matter. 
  - Package of dynamite that explodes by counting down from three.
  - Heading in yellow and font digital from the pyfiglet library.

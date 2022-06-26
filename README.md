@@ -38,7 +38,7 @@ A text based adnventure game. The user gets guided through a story. The user get
  - The story in the game goes slowley by the time.sleep() method.
  - The user can choose a character name. If the user type nothing, the programme will ask the user to type something until the user does. The User can have any character name with any character.
  - If the user either fail or complete the game, the user get the option to start again. If the user type r the game gets cleared and the game starts over with the same character name. If the user type c the user can choose a new character name and read the instructions again if needed.
- - The user can quit the game by typing quit.
+ - The user can type quit and get back to the bginning where the user can read the instructions and choose a character name.
 
   ## Technologies
 
@@ -50,7 +50,6 @@ A text based adnventure game. The user gets guided through a story. The user get
    - emoji
    - time
    - OS 
-   - sys
 
 - GitHub
   - Version control system.

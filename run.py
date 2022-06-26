@@ -1,5 +1,4 @@
 import time
-import sys
 from os import system, name
 from colorama import Fore
 import pyfiglet
@@ -32,7 +31,8 @@ def welcome():
     print('your decisions and answers. Some of the steps you take')
     print('will lead to death so be careful and best of luck!')
     print('\nIf you would like to quit the game for any reason, simply')
-    print('type quit and wait until the program stops.\n')
+    print('wait until the computer gives you the option to type and')
+    print('and type: quit.\n')
 
     print(Fore.BLUE)
     global name
@@ -48,6 +48,9 @@ def welcome():
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'r':
             start_game()
+            ans = 'correct'
+        elif choice.lower().strip() == 'quit':
+            welcome()
             ans = 'correct'
         else:
             print('\nType r you want to start the game!\n')
@@ -73,8 +76,7 @@ def start_game():
     print('You have to make a decision, either take the elevator')
     print('to the north exit or the stairs to the south exit.\n')
     time.sleep(4)
-    print('Make a decision: type stairs or elevator\n')
-    choice = input()
+    choice = input('Make a decision! Type stairs or elevator here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'stairs':
@@ -84,7 +86,7 @@ def start_game():
             option_elevator()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
-            sys.exit()
+            welcome()
             ans = 'correct'
         else:
             print('\nType stairs or elevator please!\n')
@@ -106,8 +108,7 @@ def option_stairs():
     time.sleep(2)
     print('Would you rather distinguish the fire or use the ladder? \n')
     time.sleep(1)
-    print('Type: distinguish or ladder\n')
-    choice = input()
+    choice = input('Type distinguish or ladder here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'distinguish':
@@ -119,7 +120,7 @@ def option_stairs():
             dead()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
-            sys.exit()
+            welcome()
             ans = 'correct'
         else:
             print('\nType distinguish or ladder please!\n')
@@ -145,8 +146,7 @@ def option_elevator():
     print('You see a fire ladder and a hole in the ground.')
     print('Do you rather take the ladder or jump down the hole?\n')
     time.sleep(1)
-    print('Type: ladder or hole?\n')
-    choice = input()
+    choice = input('Type: ladder or hole here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'ladder':
@@ -157,7 +157,7 @@ def option_elevator():
             option_hole()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
-            sys.exit()
+            welcome()
             ans = 'correct'
         else:
             print('\nType ladder or hole please!\n')
@@ -175,8 +175,7 @@ def option_distinguish():
     print('You need to either jump out of the window or')
     print('try to remove the rocks blocking the stairs.\n')
     time.sleep(1)
-    print('Type: window or remove?')
-    choice = input()
+    choice = input('Type window or remove here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'window':
@@ -187,7 +186,7 @@ def option_distinguish():
             option_remove()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
-            sys.exit()
+            welcome()
             ans = 'correct'
         else:
             print('\nType window or remove please!\n')
@@ -208,13 +207,15 @@ def option_remove():
     print('BUT.. there is a code to get out from the door!')
     print('The code is the same as the year Python was released!\n')
     time.sleep(2)
-    print('Type the right code!')
-    choice = input()
+    choice = input('Type the right code here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.strip() == '1991':
             print('\nThat is right!\n')
             ambulance()
+            ans = 'correct'
+        elif choice.lower().strip() == 'quit':
+            welcome()
             ans = 'correct'
         else:
             print('\nType the right code!\n')
@@ -238,8 +239,7 @@ def option_hole():
     print('Do you rather use the dynamite to explode the wall')
     print('or glide down the pole? \n')
     time.sleep(1)
-    print('Type: dynamite or pole?')
-    choice = input()
+    choice = input('Type: dynamite or pole here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'dynamite':
@@ -256,7 +256,7 @@ def option_hole():
             dead()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
-            sys.exit()
+            welcome()
             ans = 'correct'
         else:
             print('\nType dynamite or pole please!\n')
@@ -274,8 +274,7 @@ def ambulance():
     time.sleep(2)
     print('\nWould you like to call an ambulance? \n')
     time.sleep(2)
-    print('Make a decision: type call or skip\n')
-    choice = input()
+    choice = input('Type call or skip here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'call':
@@ -289,7 +288,7 @@ def ambulance():
             dead()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
-            sys.exit()
+            welcome()
             ans = 'correct'
         else:
             print('\nType call or skip please!\n')
@@ -307,15 +306,14 @@ def call_ambulance():
     print('\nHi and welcome to the SOS central! To help you')
     print('we need your location!\n')
     time.sleep(2)
-    print('Give out your location. Type the city you are at!\n')
-    choice = input()
+    choice = input('Give out your location. Type the city you are at here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'london':
             survive()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
-            sys.exit()
+            welcome()
             ans = 'correct'
         else:
             print('\nRemember your location next time!\n')
@@ -351,22 +349,19 @@ def restart():
     """
     print(Fore.BLUE)
     print('Type: r to restart the game.\n')
-    print('Type: c to choose a new character name')
+    print('Type: quit to choose a new character name')
     print('and read the game instructions.')
-    choice = input()
+    choice = input('Type r or quit here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'r':
             start_game()
             ans = 'correct'
-        elif choice.lower().strip() == 'c':
+        elif choice.lower().strip() == 'quit':
             welcome()
             ans = 'correct'
-        elif choice.lower().strip() == 'quit':
-            sys.exit()
-            ans = 'correct'
         else:
-            print('\nType: r or c please!\n')
+            print('\nType: r or quit please!\n')
             choice = input()
 
 

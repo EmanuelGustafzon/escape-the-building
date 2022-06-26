@@ -6,7 +6,7 @@ A text based adnventure game. The user gets guided through a story. The user get
 
   - As a site owner I want to provide a game that do not break at any point.
   - As a site owner I want the user to easily understand and learn the game.
-  - As a site owner I want to provide a fun and also challenging and interactive game. 
+  - As a site owner I want to provide a fun and also a challenging and interactive game. 
 
 ## User Experience
 
@@ -32,17 +32,24 @@ A text based adnventure game. The user gets guided through a story. The user get
 
  ## Features
 
-   - The first feuture the user sees is a banner and an introduction, the user choose a character name and when the user feels ready the user can click r to start the game. The user has to type in a character name and it cannot remain blank.
+    - The first feuture the user sees is a banner and the introduction, the user choose a character name and when the user feels ready the user can click or to start the game. The user has to type in a character name and it cannot remain blank.
+
  ![feature Home](/images/IMG-1644.jpg)
-   - The game starts with a clear screen, the story begins and the user gets different options to choose from. How the story continues depends on the users input.
-   - The input can have blank spaces.
-   - The input can be in lower or uppercases or mixed.
-   - If the user types a unvalid input the computer will ask the user to try again.
+
+    - The game starts with a clear screen, the story begins and the user gets different options to choose from. How the story continues depends on the users input.
+    - The input can have blank spaces.
+    - The input can be in lower or uppercases or mixed.
+    - If the user types a unvalid input the computer will ask the user to try again.
+
  ![feuture game structure](/images/IMG-1646.jpg)
-   - When the user looses the game the text is red and when the user wins the text is green. The user gets the option to go back to the beginning to choose a new character name or continue the game with the same name. Whatever the user choose the screen will be cleared so it looks nice and tidy.
+
+    - When the user looses the game the text is red and when the user wins the text is green. The user gets the option to go back to the beginning to choose a new character name or continue the game with the same name. Whatever the user choose the screen will be cleared so it looks nice and tidy.
+
  ![feature game over ](/images/IMG-1647.jpg)
  ![feuture win game](/images/IMG-1648.jpg)
+    
     - If the user decide to use dynamite, there is a function that counts down from 3 to 0 and then the dynamite explode.
+
  ![feauture count down](/images/IMG-1649.jpg)
    
     - If the user at any point wants to quit the game the user can type in quit and it will lead them back to the beginning where the user can type in a character name and start over.
@@ -75,7 +82,8 @@ A text based adnventure game. The user gets guided through a story. The user get
 
   ## Testing 
 
-- I validated the game's code through PEP8 Online.
+ - I validated the game's code through PEP8 Online.
+
 
 
    ![PEP8 Validated Code](/images/Sk%C3%A4rmbild%20(136).png)
@@ -84,7 +92,7 @@ A text based adnventure game. The user gets guided through a story. The user get
 
 - Solved
   - At first the game did not run at all. The reason for this was that the first function (def welcome():) needed to be called in the end of the game.
-  - The Python libraries did not work when the site was deployed. This cloud be fixed by typing pip freeze > requirements.txt to add those libraries to the requirements.txt file.
+  - The Python libraries did not work when the site was deployed. This could be fixed by typing pip freeze > requirements.txt to add those libraries to the requirements.txt file.
   
 - Unsolved
   - none.
@@ -93,7 +101,7 @@ A text based adnventure game. The user gets guided through a story. The user get
    
 - One feature that I would like to implement is a stopwatch. By using a threading timer the game can run at the same time as the timer and when the user has played a certain amount of the time the user fails the mission and needs to start over.
 - The game has a lot of potential to expand with more paths and tricky questions but in that case the user should not start from the beginning each time the user dies.
-- Usage of images would make the game more interactive and intresting.
+- Usage of images would make the game more interactive and interesting.
 
   ## Deployment 
 
@@ -114,7 +122,7 @@ A text based adnventure game. The user gets guided through a story. The user get
   - Step five: Deploy the site by clicking deploy. 
   - Step six: Connect to GitHub.
   - Step seven. Choose either to deploy the site mannually or automatically. If you choose automatically the site will update anytime you push new changes to GitHub. If you choose manually you choose when you want to update the app.
-  - Step eight: Click deploy branch, wait a couple of minute until the site is deplyed.
+  - Step eight: Click deploy branch, wait a couple of minutes until the site is deplyed.
   - Step nine: Click view and see the page is live.
 
   ## Credits 

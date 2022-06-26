@@ -1,5 +1,4 @@
 import time
-import sys
 from os import system, name
 from colorama import Fore
 import pyfiglet
@@ -8,7 +7,7 @@ import emoji
 
 def clear():
     """
-    This is a comment
+    This function clears the terminal or screen when called.
     """
     if name == 'nt':
         _ = system('cls')
@@ -16,36 +15,20 @@ def clear():
         _ = system('clear')
 
 
-def restart():
-    """
-    This is a comment
-    """
-    print(Fore.BLUE)
-    print('type yes if you want to restart!')
-    choice = input()
-    ans = 'incorrect'
-    while(ans == 'incorrect'):
-        if choice.lower().strip() == 'yes':
-            welcome()
-            ans = 'correct'
-        else:
-            print('\nType yes if you want to play again!\n')
-            choice = input()
-
-
 def welcome():  
     """
-    This is a comment
+    The user gets instructions and can choose a character name.
+    At first the text is yellow for the heading and introduction
+    and then the color is set to blue and continues throughout the game.
     """
     clear() 
     result = pyfiglet.figlet_format("Escape The Building", font="digital")
     print(Fore.YELLOW + result) 
     print('Instruction')
     print('This is a text based adventure game. You will be guided through')
-    print('a story and you you will get different options along the game.')
-    print('The story will continue as you choose different paths.')
-    print('If you for some reason would like to quit the game,')
-    print('Type quit instead of one of the two options suggested.')
+    print('a story and along with it you will have to take different')
+    print('decisions and answer questions. The story depends on')
+    print('your decisions and some decisions might lead to death. Enjoy!')
     print(Fore.BLUE)
     global name
     name = ''
@@ -54,22 +37,25 @@ def welcome():
     time.sleep(1)
     print(f'\nWelcome {name} to this adventure. \n')
     time.sleep(2)
-    print(f'{name} is a tourist in London.')
-    print('Right now your at a tour in a')
-    print('museum at the top floor. \n')
-    time.sleep(4)
-    print(emoji.emojize('Two bombs has exploded in the museum.'))
-    print(emoji.emojize(':collision:'))
-    time.sleep(4)
-    print('\nIt caused fire and you have to escape.\n')
-    time.sleep(3)
     start_game()
 
 
 def start_game():
     """
-    This is a comment
+    The story begins here and the user will take the first decision.
     """
+    clear()
+    print(f'\n{name} is a tourist in London.')
+    print('Right now you are at a tour in')
+    print('a museum at the top floor. \n')
+    time.sleep(4)
+    print(emoji.emojize('Two bombs has exploded in the museum.'))
+    print(emoji.emojize(':collision:'))
+    time.sleep(1)
+    print(emoji.emojize(':collision:'))
+    time.sleep(4)
+    print('\nIt caused fire and you have to escape.\n')
+    time.sleep(3)
     print('You have to make a decision, either take the elevator')
     print('to the south exit or the stairs to the north exit.\n')
     time.sleep(4)
@@ -83,9 +69,6 @@ def start_game():
         elif choice.lower().strip() == 'elevator':
             option_elevator()
             ans = 'correct'
-        elif choice.lower().strip() == 'quit':
-            welcome() 
-            ans = 'correct'
         else:
             print('\nType stairs or elevator please!\n')
             choice = input()
@@ -93,24 +76,25 @@ def start_game():
 
 def option_stairs():
     """
-    This is a comment
+    The user begins with choosing stairs or elevator. If stairs
+    is choosen the user will end up here.
     """
     time.sleep(3)
-    print('\nYou run down the stairs but you only reach half a floor down.')
+    print('\nYou run down the stairs but you only reach the third floor')
     time.sleep(2)
-    print('because you see the fire in the end of the stairs.\n')
+    print('because there is a fire on the secound floor.\n')
     time.sleep(4)
-    print('You see fire distinguisher on the wall')
+    print('You see a fire distinguisher on the wall')
     print('but also a door to a fire ladder. \n')
     time.sleep(2)
-    print('Would you rather distiguish or use the ladder? \n')
+    print('Would you rather distiguish the fire or use the ladder? \n')
     time.sleep(1)
     print('Type: distinguish or ladder\n')
     choice = input()
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'distinguish':
-            print('Awesome you distinguished the fire!\n')
+            print('\nAwesome you distinguished the fire!\n')
             option_distinguish()
             ans = 'correct'
         elif choice.lower().strip() == 'ladder':
@@ -124,7 +108,8 @@ def option_stairs():
 
 def option_elevator():
     """
-    This is a comment
+    The user begins with choosing stairs or elevator. If elevator
+    is choosen the user will end up here.
     """
     time.sleep(1)
     print('\nYou press the buttom to the elevator.\n')
@@ -158,7 +143,8 @@ def option_elevator():
 
 def option_distinguish():
     """
-    This is a comment
+    If the user choose stairs and then distiguish the
+    user will end up here.
     """
     time.sleep(2)
     print('\nThe stairs down to the bottomfloor is blocked.\n')
@@ -184,10 +170,14 @@ def option_distinguish():
 
 def option_remove():
     """
-    This is a comment
+    If the user choose stairs - distingush and then remove 
+    the user will end up here. This is a tricky question 
+    for the user becuase the user needs to search up when
+    python was released to be able to open the door.
     """
     time.sleep(3)
     print('\nYou could remove the rocks!\n')
+    print('You are now at the south exit.')
     time.sleep(3)
     print('BUT.. there is code to get out from the door!')
     print('The code is the same as the year Python was released!\n')
@@ -207,13 +197,17 @@ def option_remove():
 
 def option_hole():
     """
-    This is a comment
+    If the user choose elevator and then hole
+    the user end up here. The user needs to
+    use dynamite to get out from the building.
+    If user press dynamite, the tnt_countdown
+    function is called.
     """
     time.sleep(2)
     print('\nThe hole lead you down to the secound floor \n')
     time.sleep(3)
-    print('Now you see a pole that takes you down to floor one')
-    print('and a package of dynamite.\n')
+    print('Now you see a pole that leads down to the north exit,')
+    print('but also a package of dynamite.\n')
     time.sleep(4)
     print('Do you rather use the dynamite to explode the wall')
     print('or glide down the pole? \n')
@@ -242,7 +236,9 @@ def option_hole():
 
 def ambulance():
     """
-    This is a comment
+    When the user gets out from the building
+    an ambulance is needed. The user can choose
+    to call.
     """
     time.sleep(3)
     print('\nYou have been breathing in quite a lot of smoke')
@@ -270,7 +266,10 @@ def ambulance():
 
 def call_ambulance():
     """
-    This is a comment
+    This is the last step of the game, the
+    final question. The ambulance wants the
+    user's location. This reffers to the 
+    beginning of the game and is London.
     """
     time.sleep(3)
     print('\nHi and welcome to the SOS central! To help you')
@@ -290,7 +289,8 @@ def call_ambulance():
 
 def dead():
     """
-    This is a comment
+    The user gets informed that the game
+    is over.
     """
     print(Fore.RED + f'\nYou died {name}!\n')
     print(emoji.emojize(':skull:'))
@@ -300,7 +300,7 @@ def dead():
 
 def survive():
     """
-    This is a comment
+    The user gets informed that the game is completed.
     """
     print(Fore.GREEN + f'\nCongratulations you made it {name}! \n')
     print(emoji.emojize(':confetti_ball:'))
@@ -308,9 +308,34 @@ def survive():
     restart()
 
 
+def restart():
+    """
+    After the game is completed or if the user
+    died and it is gameover the user get the 
+    option to restart the game.
+    """
+    print(Fore.BLUE)
+    print('Type: r to restart the game.')
+    print('Type: c to choose new character name.')
+    choice = input()
+    ans = 'incorrect'
+    while(ans == 'incorrect'):
+        if choice.lower().strip() == 'r':
+            start_game()
+            ans = 'correct'
+        elif choice.lower().strip() == 'c':
+            welcome()
+            ans = 'correct'
+        else:
+            print('\nType yes if you want to play again!\n')
+            choice = input()
+
+
 def tnt_countdown(t):
     """
-    This is a comment
+    This is the countdown function 
+    for the dynamite explosion in 
+    the function called hole().
     """
     import time
     print('Waiting for the dynamite to explode!!!')

@@ -116,7 +116,7 @@ def option_stairs():
             option_distinguish()
             ans = 'correct'
         elif choice.lower().strip() == 'ladder':
-            print('To much smoke in the ladder!')
+            print('\nTo much smoke in the ladder!')
             dead()
             ans = 'correct'
         elif choice.lower().strip() == 'quit':
@@ -150,7 +150,7 @@ def option_elevator():
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'ladder':
-            print('You ended up in a room on fire')
+            print('\nYou ended up in a room on fire')
             dead()
             ans = 'correct'
         elif choice.lower().strip() == 'hole':
@@ -179,7 +179,7 @@ def option_distinguish():
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'window':
-            print('The ground is made of concrete.')
+            print('\nThe ground is made of concrete.')
             dead()
             ans = 'correct'
         elif choice.lower().strip() == 'remove':
@@ -202,7 +202,7 @@ def option_remove():
     """
     time.sleep(3)
     print('\nYou could remove the rocks!\n')
-    print('You are now at the south exit.')
+    print('You are now at the south exit.\n')
     time.sleep(3)
     print('BUT.. there is a code to get out from the door!')
     print('The code is the same as the year Python was released!\n')
@@ -306,7 +306,7 @@ def call_ambulance():
     print('\nHi and welcome to the SOS central! To help you')
     print('we need your location!\n')
     time.sleep(2)
-    choice = input('Give out your location. Type the city you are at here:')
+    choice = input('Give out your location. Type the city you are at, here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'london':
@@ -316,7 +316,7 @@ def call_ambulance():
             welcome()
             ans = 'correct'
         else:
-            print('\nRemember your location next time!\n')
+            print('\nRemember your location next time! Read more carefully.\n')
             dead()
 
 
@@ -348,9 +348,9 @@ def restart():
     option to restart the game.
     """
     print(Fore.BLUE)
-    print('Type: r to restart the game.\n')
-    print('Type: quit to choose a new character name')
-    print('and read the game instructions.')
+    print('Type: r, to restart the game.\n')
+    print('Type: quit, to choose a new character name')
+    print('and read the game instructions.\n')
     choice = input('Type r or quit here:')
     ans = 'incorrect'
     while(ans == 'incorrect'):

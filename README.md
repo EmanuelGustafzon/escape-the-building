@@ -4,7 +4,7 @@ A text based adnventure game. The user gets guided through a story. The user get
 
 ## Site Owner Goals
 
-  - As a site owner I want the game not to break at any point.
+  - As a site owner I want the game to not break at any point.
   - As a site owner I want the user to easily understand and learn the game.
   - As a site owner I want to provide a fun, challenging and interactive game. 
 
@@ -13,6 +13,7 @@ A text based adnventure game. The user gets guided through a story. The user get
  - Target Audience 
 
    - Users who wants to play a text based adventure game with action. The game is designed to be rappid and the user needs to make many decisions in a short period of time.
+   - User who likes stories.
    - Users who wants a bit of a challenge where they sometimes needs to stop and think.
 
 - User stories
@@ -27,6 +28,22 @@ A text based adnventure game. The user gets guided through a story. The user get
   ![Road Map](/images/Road%20Map%20for%20Escape%20the%20Building.jpg)
 
  ## Features
+
+   - The first feuture the user sees is a banner and an introduction, the user choose a character name and when the user feels ready the user can click r to start the game. The user has to type a username and it cannot remain blank.
+ ![feature Home](/images/IMG-1644.jpg)
+   - The game starts with a clear screen, the story begins and the user get different options to choose from. How the story continues depends on the users input.
+   - The input can have blank spaces.
+   - The input can be in lower or uppercase or mix them.
+   - If the user types an unvalid input the computer will ask the user to type in a new inpyt.
+ ![feuture game structure](/images/IMG-1646.jpg)
+   - When the user loose the game the text is red and the user get the option to get back to the beginning to choose a new character name or continue the game with the same user name. What ever the user choose the screen will start cleared.
+ ![feature game over ](/images/IMG-1647.jpg)
+    - When the user wins the game the text is green and the user get the option to get back to the beginning to choose a new character name or continue the game with the same user name. What ever the user choose the screen will start cleared.
+ ![feuture win game](/images/IMG-1648.jpg)
+    - If the user decide to use dynamite, there is a function that counts down from 3 to 0.
+ ![feauture count down](/images/IMG-1649.jpg)
+   
+    - If the user at any point want to quit the game the user can click quit. 
  
  - The user make an input and gets a output. How the story continues depends on the users input.
  - If the user type in an unvalid input the user can try again because it is running in a while loop until the answer is valid. 

@@ -139,7 +139,7 @@ def option_elevator():
     time.sleep(3)
     print('but what now?, it stopped!\n')
     time.sleep(3)
-    print('You manage to get out from the elevator\n')
+    print('You manage to get out from the elevator.\n')
     time.sleep(2)
     print('You are now at the third floor.\n')
     time.sleep(3)
@@ -150,7 +150,7 @@ def option_elevator():
     ans = 'incorrect'
     while(ans == 'incorrect'):
         if choice.lower().strip() == 'ladder':
-            print('\nYou ended up in a room on fire')
+            print('\nYou ended up in a room on fire!')
             dead()
             ans = 'correct'
         elif choice.lower().strip() == 'hole':
@@ -218,7 +218,7 @@ def option_remove():
             welcome()
             ans = 'correct'
         else:
-            print('\nType the right code!\n')
+            print('\nWrong code, try again!!\n')
             choice = input()
 
 
@@ -231,7 +231,7 @@ def option_hole():
     function is called.
     """
     time.sleep(2)
-    print('\nThe hole lead you down to the secound floor \n')
+    print('\nThe hole lead you down to the second floor. \n')
     time.sleep(3)
     print('Now you see a pole that leads down to the north exit,')
     print('but also a package of dynamite.\n')
@@ -270,7 +270,7 @@ def ambulance():
     to call.
     """
     time.sleep(3)
-    print('\nYou have been breathing in quite a lot of smoke')
+    print('\nYou have been breathing in quite a lot of smoke!')
     time.sleep(2)
     print('\nWould you like to call an ambulance? \n')
     time.sleep(2)

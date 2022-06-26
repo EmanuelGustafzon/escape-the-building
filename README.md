@@ -1,42 +1,44 @@
 # Escape The building!
-A game for anyone who are up for a challenge and wants to read a story at the same time. The game is built in python as a project for Code Institute. 
+A text based adnventure game. The user gets guided through a story. The user get different options and questions along the game. The story changes depends on what the users inputs are and some inputs will lead to death. This game is made as my third milestone project with Code Institute and I used python to build it. 
 ## https://escape-the-building.herokuapp.com/.
+
+## Site Owner Goals
+
+  - As a site owner I want the game not to break at any point.
+  - As a site owner I want the user to easily understand and learn the game.
+  - As a site owner I want to provide a fun, challenging and interactive game. 
 
 ## User Experience
 
  - Target Audience 
 
-   - Users who wants a text based adventure game that wants some action. The game is designed to be rappid and the user needs to take many decisions in a short period of time.
-   - Users who wants a bit of a challenge where they sometimes needs to stop and think. I am thinking about the code to open the door and the last question where you need to remember what been said in the beginning of the game.
-
- - Good practices implemented to provide a good user experience.
-   
-   - The user get clear instructions to learn and understand the game.
-   - The story goes slowley so the user has time to read.
-   - If the user makes a typing error, the user simply gets the option to type again.
-   - The user can use blank spaces and use capital or non capital letters when typing. The program will still understand.
-   - Using colors to make it easier to follow the game.
-   - When user fails or wins the game, the user get the option to start again and with a clear screen. The user can either keep on with the same character name or change it for the next play.
+   - Users who wants to play a text based adventure game with action. The game is designed to be rappid and the user needs to make many decisions in a short period of time.
+   - Users who wants a bit of a challenge where they sometimes needs to stop and think.
 
 - User stories
+
   - As a user I want the game to go slow so I have time to read.
   - As a user I want clear instructions.
 
 ## The Design of the Game.
 
-- This is the road map for the game. The user gets two options and have to decide one of them. The users input will affect the next output will be and how the story continues. If the user come into a room of fire, jumps out the window or make a mistake with the ambualnce the user die and the game starts over.
+- This is the road map for the game. The user gets two options and have to decide one of them and sometimes a question to answer. The users input will affect what the next output will be and how the story continues. If the user come into a room of fire, jumps out the window or make a mistake with the ambualnce the user dies and the game is over.
 
   ![Road Map](/images/Road%20Map%20for%20Escape%20the%20Building.jpg)
 
  ## Features
  
- - The user make a input and gets a output. How the story continues depends on the users input.
- - If the user type in an unvalid answer the user can try again because of a while loop. If the user type the correct answer but it is with spaces before or after, with big letter or small letters or mixed big and small letters does not matter. 
- - Package of dynamite that explodes by counting down from three.
- - Heading in yellow and font digital from the pyfiglet library.
- - The game instructions goes slowley by the time.sleep method.
- - User can choose a character name. If the user type nothing, the program will ask the user to put in something. Otherwise the User can have any username with any character.
- - If the user either fail or complete the game, the user get the option to start over by pressing yes. If the user press yes the screen gets cleared.
+ - The user make an input and gets a output. How the story continues depends on the users input.
+ - If the user type in an unvalid input the user can try again because it is running in a while loop until the answer is valid. 
+ - The user input can be in lowercase and uppercase letters. The input can have blank spaces before and after. This is because of the strip() and lower() method. 
+ - The package of dynamite that explodes by counting down from three is made with a function is called if the user choose dynamite.
+ - The heading font color is yellow from the colorama library and with a font style of digital from the pyfiglet library.
+ - The general text in the game is blue from coloroma.
+ - If the user dies the text is red and if the user wins the text is green from the same library.
+ - The story in the game goes slowley by the time.sleep() method.
+ - The user can choose a character name. If the user type nothing, the programme will ask the user to type something until the user does. The User can have any character name with any character.
+ - If the user either fail or complete the game, the user get the option to start again. If the user type r the game gets cleared and the game starts over with the same character name. If the user type c the user can choose a new character name and read the instructions again if needed.
+ - The user can quit the game by typing quit.
 
   ## Technologies
 
@@ -48,6 +50,7 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
    - emoji
    - time
    - OS 
+   - sys
 
 - GitHub
   - Version control system.
@@ -92,7 +95,7 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
   - Step one: Create new repositry.
   - Step two: choosing the Code Institute Python template.
   - Step three: Create a workspace in Gitpod.
-  - Step four: using git add . , git commit -m '' and git push to note the last updates of the application and push it up to github.
+  - Step four: using git add . , git commit -m '' and git push to note the last updates of the application and store the changes in github.
   - Step four: Install Python libraries by using the pip install command, storing them in the requierments.txt file by the pip freeze > command. 
 
 - Herokun
@@ -113,4 +116,5 @@ A game for anyone who are up for a challenge and wants to read a story at the sa
 - My mentor Spencer
 - The slack community
 - This article: https://www.askpython.com/python/text-based-adventure-game'
-- Stack Overflow
+- Stack Overflow: https://stackoverflow.com/
+- Geeks for Geeks: https://www.geeksforgeeks.org/
